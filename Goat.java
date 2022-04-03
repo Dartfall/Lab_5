@@ -118,6 +118,8 @@ public class Goat extends Unit {
         return gazeDirection;
     }
 
+    //Закончил комментирование секции направления взгляда козы
+
     /* ----------------------- Капуста ------------------------------- */
     private boolean isAte = false;
 
