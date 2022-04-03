@@ -101,11 +101,14 @@ public class Goat extends Unit {
     //Установить направление взгляда
     private void setGazeDirection(Direction dir)
     {
+	//Если передано пустое направление 
         if (dir == null)
         {
+	    //Выкинуть исключение невалидного аргумента
             throw new IllegalArgumentException();
         }
 
+	//Установить направление взгляда козы
         gazeDirection = dir;
     }
 
