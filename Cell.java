@@ -12,9 +12,11 @@ public class Cell
     //Узнать есть ли стена в направлении
     public boolean haveAWall(Direction dir)
     {
+	//Если направление не передано, вернуть ложь
         if (dir == null)
             return false;
 
+	//Получить стену в нужном напралении и порвериь её на null
         return walls.get(dir) != null;
     }
 
