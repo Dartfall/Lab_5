@@ -23,16 +23,23 @@ public class Cell
     //Установить стену
     void setWall(Wall wall, Direction dir)
     {
+	//Если стена в выбранном направлении уже установлена или передано пустое напраление или передана несуществующая стена
         if (walls.putIfAbsent(dir, wall) != null || dir == null || wall == null)
         {
+		//Выкинуть исключение неверного аргумента мктода
             throw new IllegalStateException();
         }
 
+	//Установить стену в соседнюю ячейку
         Cell neighbourCell = neighbours.get(dir);
+
+	//Если соседняя ячейка существует
         if (neighbourCell != null)
         {
+	    //Если соседняя ячейка не имеет стены в нужном направлении
             if (!neighbourCell.haveAWall(dir.reverse()))
             {
+		//Установить в соседней ячейку в нужном направлении
                 neighbourCell.setWall(wall, dir.reverse());
             }
         }
