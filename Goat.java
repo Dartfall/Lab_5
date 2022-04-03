@@ -114,6 +114,7 @@ public class Goat extends Unit {
 
     //Получить направление взгляда
     public Direction getGazeDirection() {
+	//Вернуть текущее направление взгляда Козы
         return gazeDirection;
     }
 
