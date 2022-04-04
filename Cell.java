@@ -60,6 +60,7 @@ public class Cell
         return neighbours.get(dir);
     }
 
+    //Установить соседа
     //Установление соседней Ячейки
     void setNeighbour(Cell neighbour, Direction dir)
     {
