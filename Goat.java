@@ -128,6 +128,7 @@ public class Goat extends Unit {
         isAte = true;
     }
 
+    //Съесть капусту (коммит 5)
     private void eatCabbage(Cabbage cabbage)
     {
         if (cabbage == null)
